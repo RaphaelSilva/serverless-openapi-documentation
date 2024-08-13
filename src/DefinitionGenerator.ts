@@ -144,11 +144,11 @@ export class DefinitionGenerator {
       operationObj.deprecated = true;
     }
 
-    if (operationObj.requestBody) {
+    if (documentationConfig.requestBody) {
       operationObj.requestBody = this.getRequestBodiesFromConfig(documentationConfig);
     }
 
-    if (operationObj.parameters) {
+    if (documentationConfig.queryParams) {
       operationObj.parameters = this.getParametersFromConfig(documentationConfig);
     }
 
